@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDW Fauzan Althaf Rianto </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sedan+SC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style src="styles.css">
+        /* Custom CSS for this page */
+        .greetings {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        
+        .carousel-container {
+            width: 100%;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        
+        .card {
+            flex: 0 0 33.33%;
+            padding: 50px auto;
+            box-sizing: border-box;
+        }
+        
+        .card img {
+            width: 300%; /* Ubah ukuran gambar sesuai kebutuhan */
+            height: auto;
+            object-fit: cover; /* Memastikan gambar terisi penuh di dalam card */
+            align-items: center;
+        }
+
+        .prev,.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgb(248, 241, 241); /* Warna ikon */
+    width: 40px; /* Lebar tombol */
+    height: 40px; /* Tinggi tombol */
+    background-color: rgba(0, 0, 0, 0.5); /* Warna latar belakang */
+    border: none; /* Hilangkan border */
+    border-radius: 50%; /* Bentuk bulat */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+        .prev {
+            left: 0 /* Jarak dari kiri */
+        }
+
+        .next {
+            right: 0 /* Jarak dari kanan */
+        }
+    </style>
+</head>
+
+<body>
+    <header class="navbar">
+        <a class="teks-nav" href="index.html">PRAKTIKUM PDW</a>
+        <a href="index.html" id="nav-work" class="nav-link active">
+            Home
+        </a>
+        <div class="dropdown">
+            <a href="#" id="nav-tugas" class="nav-link">
+                About Me <i class="fas fa-caret-down"></i>
+            </a>
+            <div class="dropdown-content">
+                <a href="favoriteperson.html"> Favorite Person </a>
+                <a href="favoriteartist.html"> Favorite Artist</a>
+                <a href="favoritealbum.html">Favorite Album</a>
+                <a href="favoritesongs.html">Favorite Songs</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#" id="nav-tugas" class="nav-link">
+                My Love <i class="fas fa-caret-down"></i>
+            </a>
+            <div class="dropdown-content">
+                <a href="favoriteperson.html">My Love</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="home" id="home">
+        <div class="container">
+            <div class="text">
+                <p class="greetings fade-in2" id="greetings"></p>
+                <p id="current-time" class="fade-in2"></p>
+                <p class="fade-in2">bersama Nadhira Rismawardah </p>
+                <div class="carousel-container fade-in2">
+                    <buttonC class="prev" onclick="prevSlide()">&#10094;</buttonC>
+                    <div class="carousel">
+                        <div class="card">
+                            <img src="assets/c0806ee9-74f4-4894-af2e-9c42ad1d0842.jpg" alt="Image 1" style= "width: 700px; height: 400px; margin: 0auto;" >
+                        </div>
+                        <div class="card">
+                            <img src="assets/c8665868-7659-4c1d-ae62-35ff27bdcbf8.jpg" alt="Image 2" style= "width: 700px; height: 400px;">
+                        </div>
+                    </div>
+                    <buttonC class="next" onclick="nextSlide()">&#10095;</buttonC>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container-footer">
+            <p>i love you</p>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/fauzanaltr/"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script>
+       
+        function updateGreetings() {
+    var today = new Date();
+    var startDate = new Date('2023-05-27'); 
+    var timeDiff = Math.abs(today.getTime() - startDate.getTime());
+    var daysDiff = Math.ceil(timeDiff / (1000 * 3600 * 24)); 
+    var greetingsElement = document.getElementById('greetings');
+    var currentTimeElement = document.getElementById('current-time');
+    var greetings = 'How Long Have We Been Together?';
+
+    greetingsElement.innerText = greetings;
+    currentTimeElement.innerText = 'Waktu Sekarang: ' + today.toLocaleTimeString() + '. Hari ini adalah hari ke-' + daysDiff + ' dari tanggal 27 Mei 2023.';
+}
+
+updateGreetings();
+setInterval(updateGreetings, 1000);
+
+
+       
+        var slideIndex = 0;
+
+        function showSlide() {
+            var slides = document.querySelectorAll('.card');
+            if (slideIndex >= slides.length) {
+                slideIndex = 0;
+            } else if (slideIndex < 0) {
+                slideIndex = slides.length - 1;
+            }
+            for (var i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex].style.display = "block";
+        }
+
+        function nextSlide() {
+            slideIndex++;
+            showSlide();
+        }
+
+        function prevSlide() {
+            slideIndex--;
+            showSlide();
+        }
+
+        showSlide();
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const fadeElements = document.querySelectorAll(".fade-in2");
+            fadeElements.forEach((element, index) => {
+                setTimeout(() => {
+                    element.style.opacity = "1";
+                }, index * 10);
+            });
+        });
+    </script>
+</body>
+
+</html>

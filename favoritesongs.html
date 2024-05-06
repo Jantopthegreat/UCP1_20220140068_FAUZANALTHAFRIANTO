@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDW Fauzan Althaf Rianto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sedan+SC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <a class="teks-nav" href="index.html">PRAKTIKUM PDW</a>
+        <a href="index.html" id="nav-work" class="nav-link active">
+            Home
+        </a>
+        <div class="dropdown">
+            <a href="#" id="nav-tugas" class="nav-link">
+                About Me <i class="fas fa-caret-down"></i>
+            </a>
+            <div class="dropdown-content">
+                <a href="favoriteperson.html"> Favorite Person </a>
+                <a href="favoriteartist.html"> Favorite Artist</a>
+                <a href="favoritealbum.html">Favorite Album</a>
+                <a href="favoritesongs.html">Favorite Songs</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#" id="nav-tugas" class="nav-link">
+                My Love <i class="fas fa-caret-down"></i>
+            </a>
+            <div class="dropdown-content">
+                <a href="favoriteperson.html">My Love</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="Audio" id="Audio">
+        <div class="container">
+            <div class="row-textaudio fade-in2">
+                <h4 class="fade-in2">music(s)</h4>
+                <p class="text-muted lead fade-in2"> my favorite song </p>
+            </div>
+            <div class="row-Audio fade-in2">
+                <div class="Link-audio fade-in2">
+                    <div class="row">
+                        <div class="link1-audio">
+                            <h6>16 - Baby Keem</h6>
+                            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1Is8hGpkGMiePASAxBluxM?utm_source=generator&theme=0"
+                             width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+                            </iframe>
+                        </div>
+                        <div class="link2-audio">
+                            <h6>Karma (skit) - Juice WRLD</h6>
+                            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5dOxHHMOFAbG3VH23t0xNm?utm_source=generator&theme=0" 
+                            width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+                        </iframe>
+                        </div>
+                        <div class="link3-audio">
+                            <h6>Rockstar Made - Playboi Carti</h6>
+                            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3cWmqvMwVQKDigWLSZ3w9h?utm_source=generator&theme=0" 
+                            width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+                        </iframe>
+                        </div>
+                        <div class="link3-audio">
+                            <h6>B** lets do it - NBA YoungBoy</h6>
+                            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3EN9CgupFLmuwmHYUPq0ny?utm_source=generator&theme=0" 
+                            width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+                        </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container-footer">
+            <p>we dont trust you</p>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/fauzanaltr/"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const fadeElements = document.querySelectorAll(".fade-in2");
+            fadeElements.forEach((element, index) => {
+                setTimeout(() => {
+                    element.style.opacity = "1";
+                }, index * 10);
+            });
+        });
+    </script>
+    
+</body>
+
+</html>
+
