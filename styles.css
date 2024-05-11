@@ -255,7 +255,7 @@ p {
 
 
 
-/* Aturan untuk tampilan layar dengan lebar maksimum 768px */
+
 @media screen and (max-width: 768px) {
     .teks-nav {
         margin-right: 20px; /* Mengurangi margin untuk item navigasi */
@@ -323,7 +323,7 @@ p {
     }
 }
 
-/* Aturan tambahan untuk menangani perangkat dengan layar sangat kecil, misalnya ponsel */
+
 @media screen and (max-width: 480px) {
     .nav-link {
         padding: 8px 12px; /* Mengurangi padding untuk item navigasi */
