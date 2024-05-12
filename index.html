@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,30 +8,33 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sedan+SC&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Platypi:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <style>
-        .slideshow-container {
-            position: relative;
-            max-width: 100%;
-            height: 400px; /* Atur tinggi sesuai kebutuhan */
-            overflow: hidden;
-        }
-        
-        .mySlides {
-            display: none;
-        }
-        
-        img {
-            width: 100%;
-            height: auto;
-        }
+        .text-backgroundvideo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    text-align: center;
+    color: white; /* Sesuaikan dengan warna teks yang diinginkan */
+}
+
+.video {
+    padding-top: 330px;
+    width: 40px;
+    height: 800px;
+    
+}
     </style>
 </head>
-
 <body>
     <header class="navbar">
-        <a class="teks-nav" href="index.html">PRAKTIKUM PDW</a>
+        <a class="teks-nav" href="index.html">NEVERBROKEAGAIN® </a>
         <a href="index.html" id="nav-work" class="nav-link active">
             Home
         </a>
@@ -41,7 +43,6 @@
                 About Me <i class="fas fa-caret-down"></i>
             </a>
             <div class="dropdown-content">
-                <a href="favoriteperson.html"> Favorite Person </a>
                 <a href="favoriteartist.html"> Favorite Artist</a>
                 <a href="favoritealbum.html">Favorite Album</a>
                 <a href="favoritesongs.html">Favorite Songs</a>
@@ -58,24 +59,18 @@
     </header>
 
     <section class="home" id="home">
-        <div class="container">
-            <div class="slideshow-container">
-                <div class="mySlides">
-                    <img src="gambar1xxxtentacion.jpg" alt="Slide 1">
-                </div>
-                <div class="mySlides">
-                    <img src="gambar2.jpg" alt="Slide 2">
-                </div>
-                <div class="mySlides">
-                    <img src="gambar3.jpg" alt="Slide 3">
-                </div>
+            <video autoplay muted loop class="container-backgroundvideo">
+                <source src="assets/videoplayback.mp4" type="video/mp4" style="width: 800px;">
+            </video>
+            <div class="text-backgroundvideo">
+                <h1 class="transition">YUNG JAN NEVERBROKEAGAIN</h1>
+                <p class="transition"> we dont need them, they do. </p>
+                <button onclick="showAlert()">
+                    Learn More
+                </button>
             </div>
-            <div class="text">
-                <h1 class="transition">FAUZAN ALTHAF RIANTO</h1>
-                <p class="transition">a.k.a Yung Jan Neverbrokeagain</p>
-                <p class="transition">20220140068</p>
-                <button class="transition" onclick="showAlert()">Dont Click This !</button>
-            </div>
+            <p>  </p>
+            
         </div>
     </section>
     
@@ -90,7 +85,6 @@
     </footer>
 
     <script>
-
         document.addEventListener("DOMContentLoaded", function(event) { 
     const textElements = document.querySelectorAll('.transition');
     
@@ -106,26 +100,10 @@
         });
     }, 750); // Tambahkan kelas "show" setelah 3 detik
 });
-        //Efek slide
-        let slideIndex = 0;
-        showSlides();
-        function showSlides() {
-            let i;
-            const slides = document.getElementsByClassName("mySlides");
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) {
-                slideIndex = 1;
-            }
-            slides[slideIndex - 1].style.display = "block";
-            setTimeout(showSlides, 3000); // Ubah gambar setiap 3 detik
-        }
 
-        function showAlert() {
-            alert("told you not to click this ");
-        }
+function showAlert() {
+    alert("Neverbrokeagain is not just a brand, its a lifestyle. we dont need them, they do.");
+}
 
     </script>
 </body>

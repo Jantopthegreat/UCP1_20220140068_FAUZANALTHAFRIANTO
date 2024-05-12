@@ -10,24 +10,28 @@ body {
     color: #ff0000;
     text-decoration: none;
     font-size: 30px;
-    margin-right: 700px;
+    margin-right: 1000px;
     margin-left: 40px;
     padding: 15px;
+    font-family: "Platypi", serif
 }
+
+
 
 .navbar {
     position: fixed;
     width: 100%;
     background-color: #000000;
-    padding: 15px;
+    padding: 10px;
     display: flex;
     align-items: center;
-}
+    z-index: 100;
+}   
 
 .nav-link {
     display: block;
     padding: 0 15px;
-    color: #90A4AE;
+    color: red;
     text-decoration: none;
     font-size: 19px;
 }
@@ -65,7 +69,9 @@ body {
     text-align: center;
     padding-top: 10px;
     color: red;
+    z-index: 1;
 }
+
 
 .home .container {
     display: flex;
@@ -228,6 +234,7 @@ p {
     text-align: center;
     width: 100%;
     bottom: 0;
+    
 }
 
 .container-footer {
@@ -235,6 +242,9 @@ p {
     justify-content: center;
     flex-direction: column;
     color:#ff0000;
+    width: 100%;
+
+
 }
 
 .social-icons {
@@ -253,112 +263,8 @@ p {
     color: #a10707;
 }
 
-
-
-
-@media screen and (max-width: 768px) {
-    .teks-nav {
-        margin-right: 20px; /* Mengurangi margin untuk item navigasi */
-    }
-
-    .navbar {
-        padding: 10px; /* Mengurangi padding navbar */
-    }
-
-    .nav-link {
-        font-size: 16px; /* Mengurangi ukuran font untuk item navigasi */
-    }
-
-    .home .container {
-        height: auto; /* Mengatur tinggi kontainer sesuai kebutuhan konten */
-    }
-
-    .video {
-        padding-top: 150px; /* Mengurangi padding atas untuk bagian video */
-    }
-
-    .row-video {
-        padding-top: 150px; /* Mengurangi padding atas untuk baris video */
-    }
-
-    .Link-audio {
-        margin-bottom: 10px; /* Mengurangi margin bawah untuk item audio */
-    }
-
-    .row-gambar {
-        flex-wrap: wrap; /* Mengizinkan gambar untuk melingkar saat ruang terbatas */
-    }
-
-    .gambar1,
-    .gambar2,
-    .gambar3 {
-        margin: 10px 0; /* Mengurangi margin untuk gambar */
-        width: 100%; /* Mengisi lebar untuk gambar */
-    }
-
-    h1 {
-        font-size: 30px; /* Mengurangi ukuran font untuk judul */
-        color:#ff0000;
-    }
-
-    h2 {
-        font-size: 40px; /* Mengurangi ukuran font untuk sub-judul */
-    }
-
-    h3 {
-        font-size: 30px; /* Mengurangi ukuran font untuk sub-sub-judul */
-    }
-
-    h4,
-    h5 {
-        font-size: 20px; /* Mengurangi ukuran font untuk judul-judul kecil */
-    }
-
-    .footer {
-        padding: 10px 0; /* Mengurangi padding untuk bagian footer */
-    }
-
-    .social-icons a {
-        font-size: 24px; /* Mengurangi ukuran font untuk ikon sosial */
-    }
-}
-
-
-@media screen and (max-width: 480px) {
-    .nav-link {
-        padding: 8px 12px; /* Mengurangi padding untuk item navigasi */
-    }
-
-    .home button {
-        padding: 10px 20px; /* Mengurangi padding untuk tombol */
-    }
-
-    .home h1 {
-        font-size: 24px; /* Mengurangi ukuran font untuk judul di halaman utama */
-    }
-
-    .home p {
-        font-size: 16px; /* Mengurangi ukuran font untuk teks di halaman utama */
-    }
-
-    h1 {
-        font-size: 24px; /* Mengurangi ukuran font untuk judul */
-    }
-
-    h2 {
-        font-size: 32px; /* Mengurangi ukuran font untuk sub-judul */
-    }
-
-    h3 {
-        font-size: 24px; /* Mengurangi ukuran font untuk sub-sub-judul */
-    }
-
-    h4,
-    h5 {
-        font-size: 16px; /* Mengurangi ukuran font untuk judul-judul kecil */
-    }
-
-    .social-icons a {
-        font-size: 20px; /* Mengurangi ukuran font untuk ikon sosial */
-    }
+.container-backgroundvideo {
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
